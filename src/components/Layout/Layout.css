@@ -1,0 +1,197 @@
+.app-layout {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.drawer-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drawer-toggle {
+  border: none;
+  background: transparent;
+  color: #666;
+  transition: color 0.2s ease;
+  margin-right: 0;
+}
+
+.drawer-toggle:hover {
+  color: #0078d4;
+}
+
+.app-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.app-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 0;
+  background: #f8f9fa;
+}
+
+.mobile-content {
+  padding-bottom: 60px; /* Space for bottom navigation */
+}
+
+/* Sidebar Styles */
+.drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.875rem 1.5rem;
+  text-decoration: none;
+  color: #4a4a4a;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.drawer-link:hover {
+  background: #f5f5f5;
+  color: #0078d4;
+}
+
+.drawer-link.active {
+  background: #e3f2fd;
+  color: #0078d4;
+  font-weight: 600;
+  border-right: 3px solid #0078d4;
+}
+
+.drawer-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #0078d4;
+}
+
+.drawer-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.drawer-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* KendoReact Drawer Overrides */
+.k-drawer-items .k-drawer-item {
+  padding: 0;
+}
+
+.k-drawer-items .k-drawer-item .k-drawer-item-group-label {
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0 1rem;
+    height: 56px;
+  }
+  
+  .app-title {
+    font-size: 1.25rem;
+  }
+  
+  .app-subtitle {
+    display: none;
+  }
+  
+  .user-name {
+    display: none;
+  }
+  
+  .drawer-link {
+    padding: 1rem 1.5rem;
+  }
+  
+  .drawer-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Hide drawer toggle on mobile */
+  .drawer-toggle {
+    display: none;
+  }
+  
+  /* Adjust header for mobile */
+  .header-left {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    height: 56px;
+  }
+  
+  .app-title {
+    font-size: 1.125rem;
+  }
+  
+  .drawer-link {
+    padding: 0.875rem 1rem;
+  }
+}
