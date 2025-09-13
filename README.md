@@ -1,46 +1,220 @@
-# Getting Started with Create React App
+# Receipt Scanner - KendoReact Challenge Entry
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive receipt scanning and expense tracking application built with React and KendoReact components for the DEV.to KendoReact Free Components Challenge.
 
-## Available Scripts
+## 🎯 Project Overview
 
-In the project directory, you can run:
+This application addresses a common problem in Indonesia: **difficulty tracking personal expenses** due to the hassle of manually recording receipt information twice (once on paper, once digitally). Our solution automates this process by scanning receipts and extracting expense data using OCR technology.
 
-### `npm start`
+## ✨ Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📱 Core Functionality
+- **Receipt Scanning**: Camera capture or file upload with OCR text extraction
+- **Automatic Data Extraction**: Merchant name, date, total amount, and itemized expenses
+- **Smart Categorization**: AI-powered expense categorization (Food & Dining, Groceries, Transportation, etc.)
+- **Manual Entry**: Option to manually add or edit receipt information
+- **Expense Tracking**: Comprehensive list view with filtering and search capabilities
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 📊 Analytics Dashboard
+- **Visual Charts**: Pie charts for category breakdown, column charts for monthly trends
+- **Expense Statistics**: Total expenses, monthly spending, average receipt value
+- **Category Analysis**: Detailed breakdown by expense categories
+- **Recent Activity**: Quick view of latest receipts
 
-### `npm test`
+### ⚙️ Settings & Data Management
+- **Multi-currency Support**: IDR, USD, EUR, SGD
+- **Language Options**: Indonesian + English OCR, English only
+- **Data Export/Import**: Backup and restore functionality
+- **Image Storage**: Optional receipt image storage
+- **Auto-categorization**: Toggle automatic expense categorization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technology Stack
 
-### `npm run build`
+### Frontend Framework
+- **React 18** with TypeScript
+- **KendoReact UI Components** (10+ components used)
+- **React Router** for navigation
+- **Tesseract.js** for OCR processing
+- **React Webcam** for camera integration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### KendoReact Components Used
+1. **Layout Components**: Drawer, Card, CardBody, CardTitle
+2. **Data Display**: Grid, GridColumn, GridToolbar, Chart, ChartSeries
+3. **Input Components**: TextBox, NumericTextBox, DatePicker, DropDownList, Switch
+4. **Navigation**: Button, ButtonGroup
+5. **Feedback**: Dialog, DialogActionsBar, NotificationContainer, Loader
+6. **Charts**: ChartSeriesItem, ChartCategoryAxis, ChartValueAxis, ChartLegend, ChartTooltip
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
+- Modern web browser with camera access
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd kendo-receipt
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-## Learn More
+## 📱 Usage Guide
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Scanning Receipts
+1. Navigate to the **Scan** page
+2. Choose between **Camera** or **Upload File**
+3. Capture/select your receipt image
+4. Review extracted information
+5. Edit details if needed
+6. Save to your expense list
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Managing Expenses
+1. View all receipts in the **Expenses** page
+2. Use filters to find specific receipts:
+   - Search by merchant or item name
+   - Filter by category
+   - Filter by date range
+3. Edit or delete receipts as needed
+
+### Analytics
+1. Visit the **Analytics** page for insights
+2. View expense breakdown by category
+3. Track monthly spending trends
+4. Monitor average receipt values
+
+### Settings
+1. Configure default currency and language
+2. Enable/disable auto-categorization
+3. Manage image storage preferences
+4. Export/import your data
+
+## 🎨 Design Principles
+
+### SOLID Principles Implementation
+- **Single Responsibility**: Each component has a single, well-defined purpose
+- **Open/Closed**: Components are open for extension, closed for modification
+- **Liskov Substitution**: Components can be substituted with their implementations
+- **Interface Segregation**: Clean, focused interfaces for each component
+- **Dependency Inversion**: High-level modules don't depend on low-level modules
+
+### Professional Styling with Tailwind-inspired Design
+- Clean, modern interface with consistent spacing
+- Professional color scheme using KendoReact's default theme
+- Responsive design for mobile and desktop
+- Accessible components with proper contrast and focus states
+
+## 🌟 Impact for Indonesian Users
+
+### Problem Solved
+- **Double Data Entry**: Eliminates the need to manually transcribe receipt information
+- **Expense Tracking**: Provides comprehensive expense management tools
+- **Financial Awareness**: Visual analytics help users understand spending patterns
+- **Time Saving**: Automated data extraction saves significant time
+
+### Localization Features
+- **Indonesian Language Support**: OCR optimized for Indonesian text
+- **Local Currency**: Default IDR currency formatting
+- **Local Merchants**: Smart categorization for Indonesian businesses (Indomaret, Alfamart, etc.)
+- **Cultural Context**: Understanding of local receipt formats and merchant names
+
+## 🔧 Technical Implementation
+
+### OCR Processing
+- Uses Tesseract.js for text extraction
+- Supports Indonesian + English language recognition
+- Confidence scoring for extraction quality
+- Fallback parsing for common receipt formats
+
+### Data Storage
+- Local browser storage for privacy
+- JSON export/import for data portability
+- Optimized storage with optional image compression
+
+### Performance Optimizations
+- Lazy loading of components
+- Efficient data filtering and sorting
+- Optimized chart rendering
+- Responsive image handling
+
+## 🏆 Challenge Compliance
+
+### KendoReact Components Usage
+This application uses **15+ KendoReact components** across different categories:
+
+**Layout & Structure**
+- Drawer (navigation)
+- Card, CardBody, CardTitle (content organization)
+
+**Data Display**
+- Grid (expense list)
+- Chart, ChartSeries, ChartSeriesItem (analytics)
+- ChartCategoryAxis, ChartValueAxis (chart configuration)
+- ChartLegend, ChartTooltip (chart enhancement)
+
+**User Input**
+- TextBox, NumericTextBox (text input)
+- DatePicker (date selection)
+- DropDownList (selection)
+- Switch (toggle settings)
+
+**Navigation & Actions**
+- Button, ButtonGroup (actions)
+- Dialog, DialogActionsBar (modals)
+
+**Feedback & Loading**
+- NotificationContainer (alerts)
+- Loader (loading states)
+
+### Creativity & Innovation
+- **Unique Problem**: Addresses real-world expense tracking challenges in Indonesia
+- **Smart Features**: AI-powered categorization and OCR processing
+- **Comprehensive Solution**: End-to-end expense management workflow
+- **Professional Design**: Clean, modern interface with excellent UX
+
+## 📈 Future Enhancements
+
+### Potential Improvements
+- **Cloud Sync**: Multi-device synchronization
+- **Receipt Templates**: Support for different receipt formats
+- **Budget Tracking**: Set and monitor spending limits
+- **Receipt Sharing**: Export receipts for accounting purposes
+- **Multi-language**: Support for more languages
+- **Offline Support**: PWA capabilities for offline usage
+
+## 🤝 Contributing
+
+This project was created for the KendoReact Free Components Challenge. Contributions are welcome for:
+- Bug fixes
+- Feature enhancements
+- Documentation improvements
+- Performance optimizations
+
+## 📄 License
+
+This project is created for the KendoReact Challenge and follows the challenge guidelines.
+
+## 🙏 Acknowledgments
+
+- **Progress KendoReact** for providing excellent UI components
+- **Tesseract.js** for OCR capabilities
+- **React Community** for the amazing ecosystem
+- **DEV.to** for hosting the challenge
+
+---
+
+**Built with ❤️ for the KendoReact Free Components Challenge**# hadome
